@@ -1,11 +1,28 @@
 #include <reg52.h>
 #include<LED.h>
+ 
+static void delay(int nms)
+{
+  unsigned int i, j;
+  for (i = 0; i < nms; i++)
+  {
+    for (j = 0; j < 123; j++)
+    {
 
-void light_LED(unsigned char led) {
-    switch (led) {
-    case 0: LED1 = 0; LED4 = 1; break;
-    case 1: LED2 = 0; LED1 = 1; break;
-    case 2: LED3 = 0; LED2 = 1; break;
-    case 3: LED4 = 0; LED3 = 1; break;
     }
+  }
+}
+
+void light_LED(void)
+{
+  unsigned char i;
+  while (1)
+  {
+    P2 = 0xEF;
+    for (i = 0; i < 4; i++)
+    {
+      delay(500);
+      P2 = P2 << 1;
+    }
+  }
 }
