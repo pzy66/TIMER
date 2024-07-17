@@ -1,4 +1,4 @@
-#pragma once//1231241`23123
+#pragma once//1231241`23123WOSHIZHANGYAN
 sbit LED1 = P2 ^ 4;          
 sbit LED2 = P2 ^ 5;
 sbit LED3 = P2 ^ 6;
