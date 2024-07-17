@@ -33,6 +33,9 @@
     <ClCompile Include="EEPROM.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="pzy的缓冲区.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Segment.h">

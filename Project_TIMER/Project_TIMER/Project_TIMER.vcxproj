@@ -131,6 +131,7 @@
     <ClCompile Include="Initial.c" />
     <ClCompile Include="LED.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="pzy的缓冲区.c" />
     <ClCompile Include="Segment.c" />
     <ClCompile Include="源.c" />
   </ItemGroup>
