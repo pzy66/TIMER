@@ -1,4 +1,4 @@
-#pragma once//123123
+#pragma once
 #include "Initial.h"
 #include<reg52.h>
 void Initdoor() {
