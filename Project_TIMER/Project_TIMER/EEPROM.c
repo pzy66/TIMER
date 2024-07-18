@@ -56,3 +56,19 @@ void IAPByteWrite(unsigned int addr, unsigned char dat)
 	IAPTrigger();              //触发IAP功能
 	IAPDisable();              //禁用IAP功能
 }
+
+void store(int location, int data) {//记忆变量   注意！！存储区域起码要间隔1个，比如说location一个是0x2000，另一个起码是0x2002
+	EA = 0; // 禁用全局中断(为了不让中断打断数据的存储）
+	IAPSectorErase(location); // 先擦除EEPROM存储区域
+	IAPByteWrite(location, data & 0xFF); // 写入低字节
+	IAPByteWrite(location + 1, (data >> 8) & 0xFF); // 写入高字节
+	EA = 1; // 使能全局中断
+}
+
+int read(int location) {		//读取变量 返回值是int类型的
+	int data;
+	EA = 0; // 禁用全局中断
+	data = IAPByteRead(location) | (IAPByteRead(location + 1) << 8);
+	EA = 1; // 使能全局中断
+	return data;
+}

@@ -7,6 +7,5 @@ sfr ISP_CMD = 0XE5;    //定义ISP-IAP命令寄存器
 sfr ISP_TRIG = 0XE6;    //定义ISP-IAP命令触发寄存器
 sfr ISP_CONTR = 0XE7;    //定义ISP-IAP命令寄存器
 
-void IAPSectorErase(unsigned int addr);                      //擦除指定扇区函数
-void IAPByteWrite(unsigned int addr, unsigned char dat);     //字节写入函数
-unsigned char IAPByteRead(unsigned int addr);                //字节读取函数
+void store(int location, int data);
+int read(int location);
