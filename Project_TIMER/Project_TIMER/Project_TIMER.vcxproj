@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="analyze.c" />
+    <ClCompile Include="dycmain.c" />
     <ClCompile Include="EEPROM.c" />
     <ClCompile Include="Initial.c" />
     <ClCompile Include="LED.c" />
