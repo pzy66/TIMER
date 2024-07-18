@@ -70,6 +70,7 @@ void Timer0_Handler() interrupt 1 {
       }
       else {
         sec_count = 0;
+        day_count++;
       }
     }   
 }
