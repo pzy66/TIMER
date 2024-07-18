@@ -1,8 +1,10 @@
-#include<reg52.h>
-#include<Segment.h>
+#include <reg52.h>
+#include <Segment.h>
+
 int get(int num, char n) 
 {
-    switch (n) {
+    switch (n) 
+    {
     case 1:
         return num % 10; // 返回个位
     case 2:
@@ -16,14 +18,20 @@ int get(int num, char n)
     }
 }
 
-void delay(int num) {
-    while (num--) {
-        int i;
-        for (i = 0; i < 123; i++);
+void delay(int nms) 
+{
+  unsigned int i, j;
+  for (i = 0; i < nms; i++)
+  {
+    for (j = 0; j < 123; j++)
+    {
+
     }
+  }
 }
 
-unsigned char leddata[] = {
+unsigned char leddata[] = 
+{
     0x03,  //"0"
     0x9F,  //"1"
     0x25,  //"2"
@@ -50,13 +58,15 @@ unsigned char leddata[] = {
     0xFF,  //熄灭
 };
 
-void open(char a) {
+void open(char a) 
+{
     SegmentG1 = 1;
     SegmentG2 = 1;
     SegmentG3 = 1;
     SegmentG4 = 1;
 
-    switch (a) {
+    switch (a) 
+    {
     case 0:
         SegmentG1 = 0;
         break;
@@ -74,7 +84,8 @@ void open(char a) {
     }
 }
 
-void change(int num) {
+void change(int num) 
+{
     P0 = leddata[get(num, 1)];
     open(3); // 打开第四个灯
     delay(1);
