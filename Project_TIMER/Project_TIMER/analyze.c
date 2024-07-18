@@ -45,4 +45,24 @@ unsigned char days_in_month(unsigned char month, unsigned int year) {
     return 0;
   }
 }
+ 
 
+// 解析日函数，返回当前的月份
+unsigned char ana_day(unsigned int day_count, unsigned int year) {
+  unsigned char month = 1;
+  while (day_count > days_in_month(month, year)) {
+    day_count -= days_in_month(month, year);
+    month++;
+  }
+  return day_count;
+}
+
+// 解析月份函数，返回当前的月份
+unsigned char ana_month(unsigned int day_count, unsigned int year) {
+  unsigned char month = 1;
+  while (day_count > days_in_month(month, year)) {
+    day_count -= days_in_month(month, year);
+    month++;
+  }
+  return month;
+}

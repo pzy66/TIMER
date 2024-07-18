@@ -1,22 +1,14 @@
 #include <reg52.h>
-#include <stdio.h>
-#include <LED.h>
-#include <Segment.h>
-#include <Initial.h>
+#include "LED.h"
+#include "Segment.h"
+#include "Initial.h"
+#include "analyze.h"
+ 
 
-
-// 全局变量，用于存储当前时间和日期
-static unsigned int  day_count = 1;
-static unsigned int  sec_count = 0;
-
-static unsigned int year = 2024;
-static unsigned char month = 1;
-static unsigned char day = 1;
-static unsigned char hour = 0;
-static unsigned char minute = 0;
-static unsigned char second = 0;
-
-
+unsigned long sec_count = 0; // 秒计数
+unsigned int day_count = 1;  // 天计数，初始值为1
+unsigned int year = 2024;    // 年份，初始值为2024
+ 
 // 串口发送字符串函数
 void UART_SendString(unsigned char* str) {
     while (*str != '\0') {
@@ -30,18 +22,24 @@ void UART_SendString(unsigned char* str) {
 
 // 定时器0中断服务程序
 void Timer0_Handler() interrupt 1 {
-    static unsigned int count = 0; // 定时器溢出计数
-    count++;
-    if (count >= 10000) {
-      count = 0;
-      if (sec_count < 86400) {
-        sec_count++;
+  static unsigned int count = 0; // 定时器溢出计数
+  count++;
+  if (count >= 10000) {
+    count = 0;
+    if (sec_count < 86400) {
+      sec_count++;
+    },
+    else {
+      sec_count = 0;
+      day_count++;
+      unsigned int days_in_year = 365 + ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ? 1 : 0);
+      if (day_count > days_in_year) {
+        day_count = 1;
+        year++;
       }
-      else {
-        sec_count = 0;
-        day_count++;
-      }
-    }   
+    }
+  }
+
 }
 
 // 主程序

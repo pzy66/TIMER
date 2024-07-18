@@ -229,7 +229,7 @@ void Timer0_Handler() interrupt 1 {
         count = 0;
         if (sec_count < 86400) {
             sec_count++;
-        }
+        },
         else {
             sec_count = 0;
             day_count++;
