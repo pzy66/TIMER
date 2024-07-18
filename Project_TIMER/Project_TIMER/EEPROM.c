@@ -68,7 +68,7 @@ void store(int location, int data) {//记忆变量   注意！！存储区域起码要间隔1个，
 int read(int location) {		//读取变量 返回值是int类型的
 	int data;
 	EA = 0; // 禁用全局中断
-	data = IAPByteRead(EEPROM_ADDR) | (IAPByteRead(EEPROM_ADDR + 1) << 8);
+	data = IAPByteRead(location) | (IAPByteRead(location + 1) << 8);
 	EA = 1; // 使能全局中断
 	return data;
 }

@@ -8,3 +8,4 @@ sfr ISP_TRIG = 0XE6;    //定义ISP-IAP命令触发寄存器
 sfr ISP_CONTR = 0XE7;    //定义ISP-IAP命令寄存器
 
 void store(int location, int data);
+int read(int location);
