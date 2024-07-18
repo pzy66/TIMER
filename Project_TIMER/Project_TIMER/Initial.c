@@ -1,5 +1,10 @@
 #include "Initial.h"
 #include<reg52.h>
+
+void Init_time() {
+
+}
+
 void Initdoor() {
     EA = 1;     // 使能全局中断
     EX0 = 1;    //中断0 KEY1  小门
@@ -18,6 +23,9 @@ void Timer0_Init() {
   TR0 = 1;     // 启动定时器0
 }
 
+
+
+
 // 串口初始化函数
 void InitUART() {
   TMOD = 0x20;    // 设置定时器1为模式2（8位自动重装）
@@ -26,4 +34,33 @@ void InitUART() {
   TL1 = 0xF3;
   SCON = 0x50;    // 设置串口工作方式为模式1
   TR1 = 1;        // 启动定时器1
+}
+
+void delay(int nms)
+{
+    unsigned int i, j;
+    for (i = 0; i < nms; i++)
+    {
+        for (j = 0; j < 123; j++)
+        {
+
+        }
+    }
+}
+
+char get(int num, char n)
+{
+    switch (n)
+    {
+    case '1':
+        return '0' + (num % 10); // 返回个位
+    case '2':
+        return '0' + ((num / 10) % 10); // 返回十位
+    case '3':
+        return '0' + ((num / 100) % 10); // 返回百位
+    case '4':
+        return '0' + ((num / 1000) % 10); // 返回千位
+    default:
+        return '0'; // 默认返回'0'
+    }
 }
