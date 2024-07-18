@@ -48,4 +48,21 @@ void delay(int nms)
     }
 }
 
+int get(int num, char n) 
+{
+    switch (n) 
+    {
+    case 1:
+        return num % 10; // 返回个位
+    case 2:
+        return (num / 10) % 10; // 返回十位
+    case 3:
+        return (num / 100) % 10; // 返回百位
+    case 4:
+        return (num / 1000) % 10; // 返回千位
+    default:
+        return 0; // 默认返回0
+    }
+}
+
  

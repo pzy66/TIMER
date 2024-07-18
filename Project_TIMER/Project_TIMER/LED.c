@@ -1,16 +1,7 @@
 #include <reg52.h>
 #include "LED.h"
- void delay(int nms)
-{
-  unsigned int i, j;
-  for (i = 0; i < nms; i++)
-  {
-    for (j = 0; j < 123; j++)
-    {
-
-    }
-  }
-}
+#include "Initial.h"
+ 
 
 void light_LED(void)
 {
