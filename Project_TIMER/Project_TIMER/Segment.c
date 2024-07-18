@@ -1,5 +1,6 @@
 #include <reg52.h>
-#include <Segment.h>
+#include "Segment.h"
+#include "analyze.h"
 
 int get(int num, char n) 
 {
@@ -42,18 +43,7 @@ unsigned char leddata[] =
     0x1F,  //"7"
     0x01,  //"8"
     0x09,  //"9"
-    0x11,  //"A"
-    0xC1,  //"B"
-    0x63,  //"C"
-    0x85,  //"D"
-    0x61,  //"E"
-    0x71,  //"F"
-    0x91,  //"H"
-    0xE3,  //"L"
-    0x13,  //"n"
-    0x83,  //"u"
-    0x31,  //"P"
-    0xC5,  //"o"
+    0xFE,  //"."
     0xFD,  //"-"
     0xFF,  //熄灭
 };
@@ -84,9 +74,27 @@ void open(char a)
     }
 }
 
+void class_Segment(unsigned char i,unsigned char j)
+{
+  SegmentG1 = 1;
+  SegmentG2 = 1;
+  SegmentG3 = 1;
+  SegmentG4 = 1;
+
+  switch (i)
+  {
+
+  }
+
+  switch (j)
+  {
+
+  }
+}
+
 void change(int num) 
 {
-    P0 = leddata[get(num, 1)];
+    P0 = leddata[1];
     open(3); // 打开第四个灯
     delay(1);
 

@@ -1,6 +1,7 @@
 #include "analyze.h"
 // ¼ÆËãÃëÊı
-char ana_sec(unsigned int sec_count) {
+char ana_sec(unsigned int sec_count) 
+{
   return sec_count % 60;
 }
 
