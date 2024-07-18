@@ -1,5 +1,5 @@
 #include <reg52.h>
-#include <Segment.h>
+#include "Segment.h"
 
 int get(int num, char n) 
 {
