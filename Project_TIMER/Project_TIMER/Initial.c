@@ -1,6 +1,11 @@
 #pragma once
 #include "Initial.h"
 #include<reg52.h>
+
+void Init_time() {
+
+}
+
 void Initdoor() {
     EA = 1;     // 使能全局中断
     EX0 = 1;    //中断0 KEY1  小门
@@ -18,6 +23,9 @@ void Timer0_Init() {
   TL0 = 0x9C;  // 设置初始值为0x9C
   TR0 = 1;     // 启动定时器0
 }
+
+
+
 
 // 串口初始化函数
 void InitUART() {

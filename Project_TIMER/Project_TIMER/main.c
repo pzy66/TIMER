@@ -6,6 +6,7 @@
 #include "EEPROM.h"
  
 
+
 unsigned long sec_count = 0; // 秒计数
 unsigned int day_count = 1;  // 天计数，初始值为1
 unsigned int year = 2024;    // 年份，初始值为2024
@@ -30,8 +31,19 @@ void Timer0_Handler() interrupt 1 {
       }
     }
   }
-
 }
+
+void uart_isr() interrupt 4 {
+    if (RI) {
+
+        RI = 0;                // 清除接收中断标志
+        }
+    }
+    if (TI) {
+        TI = 0;  // 清除发送中断标志
+    }
+}
+
 
 // 主程序
 void main() {
