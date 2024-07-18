@@ -1,5 +1,6 @@
 #include <reg52.h>
 #include "Segment.h"
+#include "LED.h"
 
 int get(int num, char n) 
 {
@@ -18,17 +19,6 @@ int get(int num, char n)
     }
 }
 
-void delay(int nms) 
-{
-  unsigned int i, j;
-  for (i = 0; i < nms; i++)
-  {
-    for (j = 0; j < 123; j++)
-    {
-
-    }
-  }
-}
 
 unsigned char leddata[] = 
 {

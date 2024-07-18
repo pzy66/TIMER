@@ -1,7 +1,6 @@
 #include <reg52.h>
-#include <LED.h>
- 
-static void delay(int nms)
+#include "LED.h"
+ void delay(int nms)
 {
   unsigned int i, j;
   for (i = 0; i < nms; i++)

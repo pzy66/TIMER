@@ -1,4 +1,3 @@
-#pragma once
 #include "Initial.h"
 #include<reg52.h>
 void Initdoor() {
@@ -27,5 +26,4 @@ void InitUART() {
   TL1 = 0xF3;
   SCON = 0x50;    // 设置串口工作方式为模式1
   TR1 = 1;        // 启动定时器1
-  UART_SendString("UART Initialized\r\n");
 }
