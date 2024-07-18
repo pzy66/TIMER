@@ -5,6 +5,7 @@ sbit SegmentG1 = P2 ^ 3;
 sbit SegmentG2 = P2 ^ 2;
 sbit SegmentG3 = P2 ^ 1;
 sbit SegmentG4 = P2 ^ 0;
+
 sbit KEY1 = P3 ^ 2;
 sbit KEY2 = P3 ^ 3;
 
@@ -12,8 +13,10 @@ sbit KEY2 = P3 ^ 3;
 
 static int num = 0;
 
-void delay(int num) {
-    while (num--) {
+void delay(int num) 
+{
+    while (num--) 
+    {
         int i;
         for (i = 0; i < 123; i++);
     }
@@ -41,8 +44,10 @@ void External1_Handler() interrupt 2 // 外部中断1处理程序
     while (KEY2 == 0);
 }
 
-int get(int num, char n) {
-    switch (n) {
+int get(int num, char n) 
+{
+    switch (n) 
+    {
     case 1:
         return num % 10; // 返回个位
     case 2:
@@ -56,7 +61,8 @@ int get(int num, char n) {
     }
 }
 
-unsigned char leddata[] = {
+unsigned char leddata[] = 
+{
     0x03,  //"0"
     0x9F,  //"1"
     0x25,  //"2"
@@ -84,13 +90,15 @@ unsigned char leddata[] = {
     0xFF   //自定义
 };
 
-void open(char a) {
+void open(char a) 
+{
     SegmentG1 = 1;
     SegmentG2 = 1;
     SegmentG3 = 1;
     SegmentG4 = 1;
 
-    switch (a) {
+    switch (a) 
+    {
     case 0:
         SegmentG1 = 0;
         break;
@@ -108,14 +116,17 @@ void open(char a) {
     }
 }
 
-void change(int num) {
-    if (num < 0) {
+void change(int num) 
+{
+    if (num < 0) 
+    {
         P0 = leddata[22]; // 显示 "-"
         open(0); // 打开第一个灯
         delay(2);
         num = -num; // 取正数处理
     }
-    else {
+    else 
+    {
         P0 = leddata[23]; // 熄灭符号位置的数码管
         open(0); // 打开第一个灯
         delay(2);
@@ -133,14 +144,16 @@ void change(int num) {
     open(1); // 打开第二个灯
     delay(2);
 
-    if (num >= 1000) {
+    if (num >= 1000) 
+    {
         P0 = leddata[get(num, 4)];
         open(0); // 打开第一个灯
         delay(2);
     }
 }
 
-void main() {
+void main() 
+{
     // 读取EEPROM中的num值
     EA = 0; // 禁用全局中断
     num = IAPByteRead(EEPROM_ADDR) | (IAPByteRead(EEPROM_ADDR + 1) << 8);//111111111111111111111111111111111
@@ -157,7 +170,8 @@ void main() {
     IT1 = 1; // 下降沿触发中断1
     EA = 1;  // 使能全局中断
 
-    while (1) {
+    while (1) 
+    {
         change(num);
     }
 
