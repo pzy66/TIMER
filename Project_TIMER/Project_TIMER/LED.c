@@ -5,15 +5,18 @@
 
 void light_LED(void)
 {
-  unsigned char i;
-  while (1)
-  {
-    P2 = 0xEF;
+  LED1 = 0;       //打开LED1
+  DelayNms(50);  //延迟500ms
 
-    for (i = 0; i < 4; i++)
-    {
-      delay(500);
-      P2 = P2 << 1;
-    }
-  }
+
+  LED2 = 0;       //打开LED2
+  DelayNms(50);  //延迟500ms
+
+
+  LED3 = 0;       //打开LED3
+  DelayNms(50);  //延迟500ms
+
+
+  LED4 = 0;       //打开LED4
+  DelayNms(50);  //延迟500ms
 }
