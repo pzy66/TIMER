@@ -1,5 +1,5 @@
 #include <reg52.h>
-#include<LED.h>
+#include <LED.h>
  
 static void delay(int nms)
 {
@@ -19,6 +19,7 @@ void light_LED(void)
   while (1)
   {
     P2 = 0xEF;
+
     for (i = 0; i < 4; i++)
     {
       delay(500);

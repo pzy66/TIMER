@@ -1,5 +1,9 @@
 #include <reg52.h>
 #include <stdio.h>
+#include <LED.h>
+#include <Segment.h>
+#include <Initial.h>
+
 
 // 全局变量，用于存储当前时间和日期
 unsigned int year = 2024;

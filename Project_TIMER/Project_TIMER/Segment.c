@@ -1,6 +1,7 @@
 #include<reg52.h>
 #include<Segment.h>
-int get(int num, char n) {
+int get(int num, char n) 
+{
     switch (n) {
     case 1:
         return num % 10; // ·µ»Ø¸öÎ»
