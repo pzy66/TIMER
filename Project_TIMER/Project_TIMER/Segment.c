@@ -1,6 +1,5 @@
 #include <reg52.h>
 #include "Segment.h"
-#include "LED.h"
 #include "Initial.h"
 #include "analyze.h"
 

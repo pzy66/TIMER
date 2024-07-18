@@ -4,8 +4,7 @@
 #include "Initial.h"
 #include "analyze.h"
 #include "EEPROM.h"
- 
-
+#include "output.h"
 
 unsigned long sec_count = 0; // 秒计数
 unsigned int day_count = 1;  // 天计数，初始值为1
@@ -18,17 +17,7 @@ unsigned int min;
 unsigned int hour;
 char buffer[26]; // 调整大小以适应格式化字符串
 
-// 串口发送字符串函数
-void UART_SendString(unsigned char* str) {
-    while (*str != '\0') {
-        SBUF = *str;    // 发送当前字符
-        while (!TI);    // 等待发送完成
-        TI = 0;         // 清除发送完成标志
-        str++;          // 指向下一个字符
-    }
-}
 
- 
 
 // 定时器0中断服务程序
 void Timer0_Handler() interrupt 1 {
@@ -49,8 +38,8 @@ void Timer0_Handler() interrupt 1 {
       }
     }
     
-        month = ana_month(day_count);
-        day = ana_day(day_count);
+        month = ana_month(day_count,year);
+        day = ana_day(day_count,year);
         sec = ana_sec(sec_count);
         min = ana_min(sec_count);
         hour = ana_hour(sec_count);
@@ -86,16 +75,15 @@ void Timer0_Handler() interrupt 1 {
   }
 }
 
-//void uart_isr() interrupt 4 {
-//    if (RI) {
+void uart_isr() interrupt 4 {
+    if (RI) {
+        RI = 0;                // 清除接收中断标志
+        }
+    if (TI) {
+        TI = 0;  // 清除发送中断标志
+   }
+}
 
-//        RI = 0;                // 清除接收中断标志
-//        }
-//    }
-//    if (TI) {
-//        TI = 0;  // 清除发送中断标志
-//    }
-//}
 
 
 // 主程序

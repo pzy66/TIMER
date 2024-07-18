@@ -1,8 +1,7 @@
-﻿  analyze.c
-  dycmain.c
+﻿  dycmain.c
   EEPROM.c
   Initial.c
-D:\Git\TIMER\Project_TIMER\Project_TIMER\dycmain.c(1,10): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
+/dycmain.c(1,1): error C1083: 无法打开源文件: “dycmain.c”: No such file or directory
 D:\Git\TIMER\Project_TIMER\Project_TIMER\EEPROM.c(1,10): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
 D:\Git\TIMER\Project_TIMER\Project_TIMER\Initial.c(2,9): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
   LED.c
@@ -10,7 +9,7 @@ D:\Git\TIMER\Project_TIMER\Project_TIMER\LED.c(1,10): error C1083: 无法打开�
   main.c
 D:\Git\TIMER\Project_TIMER\Project_TIMER\main.c(1,10): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
   output.c
-D:\Git\TIMER\Project_TIMER\Project_TIMER\output.c(2,1): error C1021: 无效的预处理器命令“incldue”
+D:\Git\TIMER\Project_TIMER\Project_TIMER\output.c(1,10): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
   pzy的缓冲区.c
   Segment.c
 D:\Git\TIMER\Project_TIMER\Project_TIMER\pzy的缓冲区.c(1,10): error C1083: 无法打开包括文件: “reg52.h”: No such file or directory
