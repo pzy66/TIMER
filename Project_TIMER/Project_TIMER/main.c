@@ -13,6 +13,7 @@ static unsigned char hour = 0;
 static unsigned char minute = 0;
 static unsigned char second = 0;
 static unsigned int  day_count = 1;
+static unsigned int  sec_count = 0;
 
 // 获取星期几的函数
 char* get_weekday(int  day_count) {
@@ -56,71 +57,27 @@ void UART_SendString(unsigned char* str) {
     }
 }
 
-// 串口初始化函数
-void InitUART() {
-    TMOD = 0x20;    // 设置定时器1为模式2（8位自动重装）
-    PCON = 0x80;    // 波特率加倍
-    TH1 = 0xF3;     // 设定波特率重装值，对应波特率4800
-    TL1 = 0xF3;
-    SCON = 0x50;    // 设置串口工作方式为模式1
-    TR1 = 1;        // 启动定时器1
-    UART_SendString("UART Initialized\r\n");
-}
-
-// 定时器0初始化函数
-void Timer0_Init() {
-    TMOD &= 0xF0;  // 清除定时器0模式位
-    TMOD |= 0x02;  // 设置定时器0为模式2（8位自动重装）
-    TH0 = 0xB8;    // 设定重装值，使定时器0每250次机器周期溢出一次
-    TL0 = 0xB8;
-    ET0 = 1;       // 开启定时器0中断
-    EA = 1;        // 全局中断使能
-    TR0 = 1;       // 启动定时器0
-}
 
 // 定时器0中断服务程序
 void Timer0_Handler() interrupt 1 {
     static unsigned int count = 0; // 定时器溢出计数
-    char buffer[50];
-
     count++;
-
-    if (count >= 12000) { // 每4000次溢出大约1秒
-        count = 0;
-        // 更新时间
-        second++;
-        if (second >= 60) {
-            second = 0;
-            minute++;
-            if (minute >= 60) {
-                minute = 0;
-                hour++;
-                if (hour >= 24) {
-                    hour = 0;
-                    day++;
-                    day_count++;
-                    if (day > days_in_month(month, year)) {
-                        day = 1;
-                        month++;
-                        if (month > 12) {
-                            month = 1;
-                            year++;
-                        }
-                    }
-                }
-            }
-        }
-
-        // 格式化当前时间并输出到串口
-        sprintf(buffer, "%4d-%2d-%2d %2d:%2d:%2d %s\r\n", year, month, day, hour, minute, second, get_weekday(day));
-        UART_SendString(buffer); // 发送到UART
-    }
+    if (count >= 10000) {
+      count = 0;
+      if (sec_count <= 86400) {
+        sec_count++;
+      }
+      else {
+        sec_count = 0;
+      }
+    }   
 }
 
 // 主程序
 void main() {
-    InitUART(); // 初始化串口
-    Timer0_Init();  // 初始化定时器0
+    Initdoor();  //中断初始化
+    Timer0_Init(); //定时器1 100微妙
+    InitUART();// 串口初始化函数
     UART_SendString("Hello, world!\r\n");
 
     while (1) {

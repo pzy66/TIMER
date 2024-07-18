@@ -11,13 +11,21 @@ void Initdoor() {
     ET2 = 1;    //中断5 定时器2  小门
 }
 
-void Init_Timer0() {
-    TMOD = 0x01; // 设置定时器0为模式1（16位定时器模式）
-    TH0 = 0xFC;  // 设置定时器初值高字节
-    TL0 = 0x18;  // 设置定时器初值低字节
-    TR0 = 0;     // 启动定时器
+void Timer0_Init() {
+  TMOD &= 0xF0;  // 清除定时器0模式位
+  TMOD = 0x02; // 定时器0工作模式2（8位自动重装）
+  TH0 = 0x9C;  // 设置重装值为0x9C（100微秒定时）
+  TL0 = 0x9C;  // 设置初始值为0x9C
+  TR0 = 1;     // 启动定时器0
 }
 
-void Init_Timer1()
-{
+// 串口初始化函数
+void InitUART() {
+  TMOD = 0x20;    // 设置定时器1为模式2（8位自动重装）
+  PCON = 0x80;    // 波特率加倍
+  TH1 = 0xF3;     // 设定波特率重装值，对应波特率4800
+  TL1 = 0xF3;
+  SCON = 0x50;    // 设置串口工作方式为模式1
+  TR1 = 1;        // 启动定时器1
+  UART_SendString("UART Initialized\r\n");
 }
