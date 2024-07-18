@@ -29,3 +29,32 @@ void InitUART() {
   TR1 = 1;        // 启动定时器1
   UART_SendString("UART Initialized\r\n");
 }
+
+void delay(int nms)
+{
+    unsigned int i, j;
+    for (i = 0; i < nms; i++)
+    {
+        for (j = 0; j < 123; j++)
+        {
+
+        }
+    }
+}
+
+char get(int num, char n)
+{
+    switch (n)
+    {
+    case '1':
+        return '0' + (num % 10); // 返回个位
+    case '2':
+        return '0' + ((num / 10) % 10); // 返回十位
+    case '3':
+        return '0' + ((num / 100) % 10); // 返回百位
+    case '4':
+        return '0' + ((num / 1000) % 10); // 返回千位
+    default:
+        return '0'; // 默认返回'0'
+    }
+}
