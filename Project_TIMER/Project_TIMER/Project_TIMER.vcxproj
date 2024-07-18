@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="analyze.c" />
     <ClCompile Include="EEPROM.c" />
     <ClCompile Include="Initial.c" />
     <ClCompile Include="LED.c" />
@@ -137,6 +138,7 @@
     <ClCompile Include="源.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analyze.h" />
     <ClInclude Include="EEPROM.h" />
     <ClInclude Include="Initial.h" />
     <ClInclude Include="LED.h" />

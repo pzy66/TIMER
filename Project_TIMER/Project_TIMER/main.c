@@ -6,14 +6,15 @@
 
 
 // 全局变量，用于存储当前时间和日期
+static unsigned int  day_count = 1;
+static unsigned int  sec_count = 0;
+
 static unsigned int year = 2024;
 static unsigned char month = 1;
 static unsigned char day = 1;
 static unsigned char hour = 0;
 static unsigned char minute = 0;
 static unsigned char second = 0;
-static unsigned int  day_count = 1;
-static unsigned int  sec_count = 0;
 
 // 获取星期几的函数
 char* get_weekday(int  day_count) {
@@ -64,7 +65,7 @@ void Timer0_Handler() interrupt 1 {
     count++;
     if (count >= 10000) {
       count = 0;
-      if (sec_count <= 86400) {
+      if (sec_count < 86400) {
         sec_count++;
       }
       else {

@@ -39,6 +39,9 @@
     <ClCompile Include="output.c">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="analyze.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Segment.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="EEPROM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="analyze.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
