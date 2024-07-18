@@ -1,5 +1,5 @@
-#include"output.h"
-
+#include <reg52.h>
+#include "output.h"
 void UART_SendString(unsigned char* str) {
     while (*str != '\0') {
         SBUF = *str;    // ·¢ËÍµ±Ç°×Ö·û

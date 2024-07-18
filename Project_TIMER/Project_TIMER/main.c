@@ -17,6 +17,7 @@ unsigned int sec;
 unsigned int min;
 unsigned int hour;
 char buffer[26]; // 调整大小以适应格式化字符串
+
 // 串口发送字符串函数
 void UART_SendString(unsigned char* str) {
     while (*str != '\0') {
@@ -102,12 +103,8 @@ void main() {
     Initdoor();  //中断初始化
     Timer0_Init(); //定时器1 100微妙
     InitUART();// 串口初始化函数
- 
-    
- 
-
     while (1) {
-        
+        display_time(sec_count);
     }
 }
 

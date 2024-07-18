@@ -2,7 +2,7 @@
 #include "Segment.h"
 #include "LED.h"
 #include "Initial.h"
-
+#include "analyze.h"
 
 unsigned char leddata[] = 
 {
@@ -32,47 +32,43 @@ unsigned char leddata[] =
     0xFF,  //熄灭
 };
 
-void open(char a) 
-{
+void open_segment(unsigned char seg) {
     SegmentG1 = 1;
     SegmentG2 = 1;
     SegmentG3 = 1;
     SegmentG4 = 1;
 
-    switch (a) 
-    {
-    case 0:
-        SegmentG1 = 0;
-        break;
-    case 1:
-        SegmentG2 = 0;
-        break;
-    case 2:
-        SegmentG3 = 0;
-        break;
-    case 3:
-        SegmentG4 = 0;
-        break;
-    default:
-        break;
+    switch (seg) {
+    case 0: SegmentG1 = 0; break;
+    case 1: SegmentG2 = 0; break;
+    case 2: SegmentG3 = 0; break;
+    case 3: SegmentG4 = 0; break;
+    default: break;
     }
 }
 
-void change(int num) 
-{
-    P0 = leddata[get(num, 1)];
-    open(3); // 打开第四个灯
+// 显示一个数码管的值
+void display_digit(unsigned char position, unsigned char value) {
+    P0 = leddata[value];
+    open_segment(position);
     delay(1);
+}
 
-    P0 = leddata[get(num, 2)];
-    open(2); // 打开第三个灯
-    delay(1);
+// 显示时间
+void display_time(int sec_count) {
+    unsigned char hour_high, hour_low, min_high, min_low;
+    unsigned char ana_hour_val, ana_min_val;
+  
+    ana_hour_val = ana_hour(sec_count);
+    ana_min_val = ana_min(sec_count);
 
-    P0 = leddata[get(num, 3)];
-    open(1); // 打开第二个灯
-    delay(1);
+    hour_high = get(ana_hour_val, 2);
+    hour_low = get(ana_hour_val, 1);
+    min_high = get(ana_min_val, 2);
+    min_low = get(ana_min_val, 1);
 
-    P0 = leddata[get(num, 4)];
-    open(0); // 打开第一个灯
-    delay(1);
+    display_digit(3, hour_high);
+    display_digit(2, hour_low);
+    display_digit(1, min_high);
+    display_digit(0, min_low);
 }
