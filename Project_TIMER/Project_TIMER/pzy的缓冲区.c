@@ -23,9 +23,9 @@ void External0_Handler() interrupt 0 // 外部中断0处理程序
 {
     num++;
     EA = 0; // 禁用全局中断
-    IAPSectorErase(EEPROM_ADDR); // 先擦除EEPROM存储区域
-    IAPByteWrite(EEPROM_ADDR, num & 0xFF); // 写入低字节
-    IAPByteWrite(EEPROM_ADDR + 1, (num >> 8) & 0xFF); // 写入高字节
+    IAPSectorErase(EEPROM_ADDR); // 先擦除EEPROM存储区域///////////11111111111111111111111111111111
+    IAPByteWrite(EEPROM_ADDR, num & 0xFF); // 写入低字节///////////11111111111111111111111111
+    IAPByteWrite(EEPROM_ADDR + 1, (num >> 8) & 0xFF); // 写入高字节/111111111111111111111111111111111
     EA = 1; // 使能全局中断
     while (KEY1 == 0);
 }
@@ -143,7 +143,7 @@ void change(int num) {
 void main() {
     // 读取EEPROM中的num值
     EA = 0; // 禁用全局中断
-    num = IAPByteRead(EEPROM_ADDR) | (IAPByteRead(EEPROM_ADDR + 1) << 8);
+    num = IAPByteRead(EEPROM_ADDR) | (IAPByteRead(EEPROM_ADDR + 1) << 8);//111111111111111111111111111111111
     EA = 1; // 使能全局中断
 
     // 检查是否为无效值
