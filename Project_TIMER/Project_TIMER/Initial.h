@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-#pragma once
 void Init_time();
->>>>>>> 9794e7c3099883feb3d71aaf0870bd7241bd45e6
 void Initdoor();  //中断初始化
 void Timer0_Init(); //定时器1 100微妙
 void InitUART();// 串口初始化函数

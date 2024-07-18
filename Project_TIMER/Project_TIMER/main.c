@@ -10,7 +10,6 @@
 unsigned long sec_count = 0; // 秒计数
 unsigned int day_count = 1;  // 天计数，初始值为1
 unsigned int year = 2024;    // 年份，初始值为2024
-<<<<<<< HEAD
 unsigned int days_in_year =0;
 unsigned int month;
 unsigned int day;
@@ -28,9 +27,7 @@ void UART_SendString(unsigned char* str) {
     }
 }
 
-=======
  
->>>>>>> 9794e7c3099883feb3d71aaf0870bd7241bd45e6
 
 // 定时器0中断服务程序
 void Timer0_Handler() interrupt 1 {

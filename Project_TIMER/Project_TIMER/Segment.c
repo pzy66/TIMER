@@ -1,6 +1,6 @@
 #include <reg52.h>
 #include "Segment.h"
-<<<<<<< HEAD
+
 #include "LED.h"
 
 int get(int num, char n) 
@@ -20,9 +20,9 @@ int get(int num, char n)
     }
 }
 
-=======
+
 #include "Initial.h"
->>>>>>> 9794e7c3099883feb3d71aaf0870bd7241bd45e6
+
 
 unsigned char leddata[] = 
 {
