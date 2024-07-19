@@ -48,14 +48,11 @@ void Timer0_Handler() interrupt 1 {
         sec = ana_sec(sec_count);
         min = ana_min(sec_count);
         hour = ana_hour(sec_count);
-      printf("%d-%d-%d\n%d:%d:%d", year, month, day, hour, min, sec);
-    
-    }
-    // 重新加载定时器初始值
-    TH0 = 0x8A;
-    TL0 = 0xD0;
-       
-  }
+        printf("%d-%d-%d %s\n%d:%d:%d\n", year, month, day, get_weekday(day_count), hour, min, sec);
+    }    
+}
+   
+  
 
 void uart_isr() interrupt 4 {
     if (RI) {
