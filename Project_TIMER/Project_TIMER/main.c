@@ -1,4 +1,5 @@
 #include <reg52.h>
+#include <stdio.h>
 #include "LED.h"
 #include "Segment.h"
 #include "Initial.h"
@@ -15,8 +16,14 @@ unsigned int day;
 unsigned int sec;
 unsigned int min;
 unsigned int hour;
-char buffer[26]; // 调整大小以适应格式化字符串
-
+ 
+char putchar(char ch)
+{
+    SBUF = ch;
+    while(TI == 0);
+    TI = 0;
+    return ch;
+}
 
 
 // 定时器0中断服务程序
@@ -36,32 +43,25 @@ void Timer0_Handler() interrupt 1 {
                 year++;
             }
         }
+        month = ana_month(day_count, year);
+        day = ana_day(day_count, year);
+        sec = ana_sec(sec_count);
+        min = ana_min(sec_count);
+        hour = ana_hour(sec_count);
+      printf("%d-%d-%d\n%d:%d:%d", year, month, day, hour, min, sec);
+    
     }
     // 重新加载定时器初始值
     TH0 = 0x8A;
     TL0 = 0xD0;
-    
-        month = ana_month(day_count,year);
-        day = ana_day(day_count,year);
-        sec = ana_sec(sec_count);
-        min = ana_min(sec_count);
-        hour = ana_hour(sec_count);
-
-        
-        display_time(sec_count);
-        UART_SendString(buffer); // 发送到UART
        
-       TH0 = 0x8A;    //重载定时器初值
-        TL0 = 0xD0;
   }
 
 void uart_isr() interrupt 4 {
     if (RI) {
         RI = 0;                // 清除接收中断标志
         }
-    if (TI) {
-        TI = 0;  // 清除发送中断标志
-   }
+    
 }
 
 
@@ -69,8 +69,8 @@ void uart_isr() interrupt 4 {
 // 主程序
 void main() {
     Initdoor();  //中断初始化
-    Timer0_Init(); //定时器1 100微妙
     InitUART();// 串口初始化函数
+   Timer0_Init(); //定时器1 100微妙
     while (1) {
       
     }
