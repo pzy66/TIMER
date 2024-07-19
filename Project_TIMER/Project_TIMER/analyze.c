@@ -15,20 +15,6 @@ char ana_hour(unsigned int sec_count) {
   return (sec_count / 3600) % 24;
 }
 
-// 获取星期几的函数
-char* get_weekday(int  day_count) {
-  int d = (day_count + 1) % 7;
-  switch (d) {
-  case 0: return "Sat";
-  case 1: return "Sun";
-  case 2: return "Mon";
-  case 3: return "Tue";
-  case 4: return "Wed";
-  case 5: return "Thu";
-  case 6: return "Fri";
-  default: return "Unknown";
-  }
-}
 
 // 帮助函数，确定每个月的天数
 unsigned char days_in_month(unsigned char month, unsigned int year) {
