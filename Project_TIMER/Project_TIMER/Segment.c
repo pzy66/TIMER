@@ -66,8 +66,8 @@ void display_time(int sec_count) {
     min_high = get(ana_min_val, 2);
     min_low = get(ana_min_val, 1);
 
-    display_digit(3, hour_high);
-    display_digit(2, hour_low);
-    display_digit(1, min_high);
-    display_digit(0, min_low);
+    display_digit('3', hour_high);
+    display_digit('2', hour_low);
+    display_digit('1', min_high);
+    display_digit('0', min_low);
 }

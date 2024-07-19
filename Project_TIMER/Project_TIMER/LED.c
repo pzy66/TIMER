@@ -6,17 +6,18 @@
 void light_LED(void)
 {
   LED1 = 0;       //´ò¿ªLED1
-  delay(50);  //ÑÓ³Ù500ms
-
+  delay(500);  //ÑÓ³Ù500ms
+  LED1 = 1; 
 
   LED2 = 0;       //´ò¿ªLED2
-   delay(50);  //ÑÓ³Ù500ms
-
+  delay(500);  //ÑÓ³Ù500ms
+  LED2 = 1;
 
   LED3 = 0;       //´ò¿ªLED3
-    delay(50);  //ÑÓ³Ù500ms
-
+  delay(500);  //ÑÓ³Ù500ms
+  LED3 = 1;
 
   LED4 = 0;       //´ò¿ªLED4
-    delay(50);  //ÑÓ³Ù500ms
+  delay(500);  //ÑÓ³Ù500ms
+  LED4 = 1;
 }
