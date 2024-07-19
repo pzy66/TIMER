@@ -76,6 +76,8 @@ void main() {
    Timer0_Init(); //¶¨Ê±Æ÷1 100Î¢Ãî
     while (1) {
         display_time(sec_count);
+      LED1=~LED1;
+      delay(10);
     }
 }
 
