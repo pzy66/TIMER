@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Git\\TIMER\\Project_TIMER\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\Segment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\pzy\u7684\u7F13\u51B2\u533A.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -81,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -101,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\main.c",
               "RelativeDocumentMoniker": "Project_TIMER\\main.c",
@@ -114,15 +114,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Segment.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c",
               "RelativeDocumentMoniker": "Project_TIMER\\Segment.c",
               "ToolTip": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c",
               "RelativeToolTip": "Project_TIMER\\Segment.c",
-              "ViewState": "AQIAACYAAAAAAAAAAAAmwDgAAAAAAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-07-16T11:56:00.33Z"
+              "WhenOpened": "2024-07-16T11:56:00.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -174,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Segment.h",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.h",
               "RelativeDocumentMoniker": "Project_TIMER\\Segment.h",
@@ -182,8 +183,7 @@
               "RelativeToolTip": "Project_TIMER\\Segment.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-16T11:56:06.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T11:56:06.344Z"
             },
             {
               "$type": "Document",
