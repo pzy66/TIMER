@@ -11,20 +11,24 @@
       "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\output.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\analyze.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\analyze.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\Segment.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\LED.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\LED.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\\u6E90.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\\u6E90.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\pzy\u7684\u7F13\u51B2\u533A.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\pzy\u7684\u7F13\u51B2\u533A.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\\u6E90.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\\u6E90.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\analyze.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\analyze.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\LED.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|solutionrelative:Project_TIMER\\LED.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58490A29-A6A8-48E4-9CA7-DDFA41FFE6C1}|Project_TIMER\\Project_TIMER.vcxproj|D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\dycmain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -57,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,7 +69,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "Segment.c",
+              "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c",
+              "RelativeDocumentMoniker": "Project_TIMER\\Segment.c",
+              "ToolTip": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Segment.c",
+              "RelativeToolTip": "Project_TIMER\\Segment.c",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-19T03:21:31.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "dycmain.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\dycmain.c",
               "RelativeDocumentMoniker": "Project_TIMER\\dycmain.c",
@@ -83,7 +100,7 @@
               "RelativeDocumentMoniker": "Project_TIMER\\main.c",
               "ToolTip": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\main.c",
               "RelativeToolTip": "Project_TIMER\\main.c",
-              "ViewState": "AQIAADMAAAAAAAAAAAA3wD4AAAADAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAA3wE0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-07-16T12:57:06.751Z",
               "EditorCaption": ""
@@ -98,11 +115,12 @@
               "RelativeToolTip": "Project_TIMER\\output.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-07-18T06:35:24.001Z"
+              "WhenOpened": "2024-07-18T06:35:24.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "analyze.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\analyze.c",
               "RelativeDocumentMoniker": "Project_TIMER\\analyze.c",
@@ -114,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LED.h",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\LED.h",
               "RelativeDocumentMoniker": "Project_TIMER\\LED.h",
@@ -126,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "EEPROM.h",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\EEPROM.h",
               "RelativeDocumentMoniker": "Project_TIMER\\EEPROM.h",
@@ -138,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LED.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\LED.c",
               "RelativeDocumentMoniker": "Project_TIMER\\LED.c",
@@ -158,11 +176,12 @@
               "RelativeToolTip": "Project_TIMER\\pzy\u7684\u7F13\u51B2\u533A.c",
               "ViewState": "AQIAAN4AAAAAAAAAAAAAAOIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-07-17T07:03:14.37Z"
+              "WhenOpened": "2024-07-17T07:03:14.37Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EEPROM.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\EEPROM.c",
               "RelativeDocumentMoniker": "Project_TIMER\\EEPROM.c",
@@ -174,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "\u6E90.c",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\\u6E90.c",
               "RelativeDocumentMoniker": "Project_TIMER\\\u6E90.c",
@@ -182,11 +201,12 @@
               "RelativeToolTip": "Project_TIMER\\\u6E90.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-07-16T11:54:46.158Z"
+              "WhenOpened": "2024-07-16T11:54:46.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LED.c",
               "DocumentMoniker": "C:\\Users\\P1233\\Documents\\WeChat Files\\wxid_s2fnhrne6ohl32\\FileStorage\\File\\2024-07\\LED.c",
               "ToolTip": "C:\\Users\\P1233\\Documents\\WeChat Files\\wxid_s2fnhrne6ohl32\\FileStorage\\File\\2024-07\\LED.c [\u53EA\u8BFB]",
@@ -196,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Project_TIMER.vcxproj",
               "DocumentMoniker": "D:\\Git\\TIMER\\Project_TIMER\\Project_TIMER\\Project_TIMER.vcxproj",
               "RelativeDocumentMoniker": "Project_TIMER\\Project_TIMER.vcxproj",

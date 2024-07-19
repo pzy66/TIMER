@@ -5,7 +5,7 @@
 #include "Initial.h"
 #include "analyze.h"
 #include "EEPROM.h"
-#include "output.h"
+
 
 unsigned int sec_count = 0; // 秒计数
 unsigned int day_count = 1;  // 天计数，初始值为1
@@ -75,7 +75,7 @@ void main() {
     InitUART();// 串口初始化函数
    Timer0_Init(); //定时器1 100微妙
     while (1) {
-      
+        display_time(sec_count);
     }
 }
 
