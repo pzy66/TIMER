@@ -48,7 +48,8 @@ void Timer0_Handler() interrupt 1 {
         sec = ana_sec(sec_count);
         min = ana_min(sec_count);
         hour = ana_hour(sec_count);
-        printf("%d-%d-%d %s\n%d:%d:%d\n", year, month, day, get_weekday(day_count), hour, min, sec);
+        printf("%d-%d-%d %d:%d:%d", year,month,day,hour,min,sec);
+        printf£¨"%s\n", get_weekday(day_count)£©;
     }    
 }
    
